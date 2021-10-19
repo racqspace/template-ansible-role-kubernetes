@@ -8,6 +8,6 @@
   tasks:
     - name: Destroy test kind cluster
       ansible.builtin.command:
-        cmd: kind delete cluster --name {{ cookiecutter.role_name }}-test --kubeconfig  {% raw -%}{{ kubeconfig }}{%- endraw %}  # yamllint disable-line rule:line-length
+        cmd: kind delete cluster --name {{ cookiecutter.role_name | replace("_", "-") }}-test --kubeconfig  {% raw -%}{{ kubeconfig }}{%- endraw %}  # yamllint disable-line rule:line-length
       changed_when: false
 ...

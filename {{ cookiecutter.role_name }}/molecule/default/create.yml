@@ -6,16 +6,16 @@
   tasks:
     - name: Create test kind cluster
       ansible.builtin.command:
-        cmd: kind create cluster --name {{ cookiecutter.role_name }}-test --kubeconfig  {% raw -%}{{ kubeconfig }}{%- endraw %}  # yamllint disable-line rule:line-length
+        cmd: kind create cluster --name {{ cookiecutter.role_name | replace("_", "-") }}-test --kubeconfig  {% raw -%}{{ kubeconfig }}{%- endraw %}  # yamllint disable-line rule:line-length
       changed_when: false
 
     - name: apt update
       ansible.builtin.command:
-        cmd: docker exec {{ cookiecutter.role_name }}-test-control-plane apt update
+        cmd: docker exec {{ cookiecutter.role_name | replace("_", "-") }}-test-control-plane apt update
       changed_when: false
 
     - name: install python3
       ansible.builtin.command:
-        cmd: docker exec {{ cookiecutter.role_name }}-test-control-plane apt install -y python3
+        cmd: docker exec {{ cookiecutter.role_name | replace("_", "-") }}-test-control-plane apt install -y python3
       changed_when: false
 ...

@@ -16,7 +16,7 @@ provisioner:
     hosts:
       all:
         hosts:
-          {{ cookiecutter.role_name }}-test-control-plane: {}
+          {{ cookiecutter.role_name | replace("_", "-") }}-test-control-plane: {}
           localhost:
             kubeconfig: ${MOLECULE_EPHEMERAL_DIRECTORY}/kubeconfig
 verifier:
