@@ -21,30 +21,30 @@ role_name | my_role_name | Set Ansible role name used throughout the template.
 
 ## Template Examples
 
-1. Create a config file named `role_variables.yml` and alter the following content to your needs
-
-```yaml
-default_context:
-  author: ckaserer
-  description: something, something kubernetes
-  license: MIT
-  min_ansible_version: "2.10"
-  namespace: racqspace
-  role_name: something_k8s
-```
-
-2. Install cookiecutter on your system
+1. Install cookiecutter on your system
 
 ```
 pip3 install -r requirements.txt
 ```
 
-3. Run cookiecutter with your own configuration
+2. Run cookiecutter
 
 ```
-cookicutter https://github.com/racqspace/template-ansible-role-kubernetes \
-  --config-file=./role_variables.yml
+cookicutter https://github.com/racqspace/template-ansible-role-kubernetes
 ```
+
+3. Answer the cookiecutter questionair.
+
+```
+author [Mr Kubernetes]: 
+description [Ansible Role Description]: 
+license [MIT]: 
+min_ansible_version [2.10]: 
+namespace [role_namespace]: 
+role_name [my_role_name]: 
+```
+
+4. Cookiecutter will create a new folder named after `role_name` containing your new ansible role folder structure.
 
 ## License
 
