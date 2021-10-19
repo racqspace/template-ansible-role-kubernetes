@@ -12,7 +12,7 @@ Create the folder structure and basic functionality to develop an ansible role t
 
 Variable Name | Default Value | Description
 ------------ | ------------- | -------------
-author | Mr Kuberentes | Set author in meta/main.yml
+author | Mr Kubernetes | Set author in meta/main.yml
 description | Ansible Role Description |  Set description in meta/main.yml.
 license | MIT | Set license in meta/main.yml.
 min_ansible_version | 2.10  | Set min_ansible_version in meta/main.yml.

@@ -1,5 +1,5 @@
 {
-    "author": "ckaserer",
+    "author": "Mr Kubernetes",
     "description": "Ansible Role Description",
     "license": "MIT",
     "min_ansible_version": "2.10",

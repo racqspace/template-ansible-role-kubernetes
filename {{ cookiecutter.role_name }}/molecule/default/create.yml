@@ -6,7 +6,7 @@
   tasks:
     - name: Create test kind cluster
       ansible.builtin.command:
-        cmd: kind create cluster --name {{ cookiecutter.role_name }}-test --kubeconfig  {% raw -%}{{ kubeconfig }}{%- endraw %}  # yamllint disable-line rule:line-length  
+        cmd: kind create cluster --name {{ cookiecutter.role_name }}-test --kubeconfig  {% raw -%}{{ kubeconfig }}{%- endraw %}  # yamllint disable-line rule:line-length
       changed_when: false
 
     - name: apt update
