@@ -1,4 +1,4 @@
-# Ansible Role: awx
+# Cookiecutter Template: ansible-role-kubernetes
 
 ![MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/racqspace/template-ansible-role-kubernetes/Main?style=flat-square)
@@ -8,7 +8,7 @@
 
 Create the folder structure and basic functionality to develop an ansible role that targets kubernetes workload.
 
-## Role Variables
+## Template Variables
 
 Variable Name | Default Value | Description
 ------------ | ------------- | -------------
@@ -20,9 +20,6 @@ namespace | role_namespace |  Set namespace in meta/main.yml.
 role_name | my_role_name | Set Ansible role name used throughout the template.
 
 ## Template Examples
-
-Example for installing awx with enabled ingress available at awx.example.com.
-
 
 1. Create a config file named `role_variables.yml` and alter the following content to your needs
 
@@ -45,7 +42,8 @@ pip3 install -r requirements.txt
 3. Run cookiecutter with your own configuration
 
 ```
-cookicutter https://github.com/racqspace/template-ansible-role-kubernetes --config-file=./role_variables.yml
+cookicutter https://github.com/racqspace/template-ansible-role-kubernetes \
+  --config-file=./role_variables.yml
 ```
 
 ## License
