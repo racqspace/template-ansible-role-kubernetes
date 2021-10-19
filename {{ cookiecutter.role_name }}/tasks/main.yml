@@ -1,0 +1,32 @@
+---
+- name: Install dependencies
+  ansible.builtin.apt:
+    name:
+      - python3-pip
+    state: present
+    update_cache: true
+    cache_valid_time: "{{ '{{' }} {{ cookiecutter.role_name }}_cache_valid_time {{ '}}' }}"
+  tags:
+    - {{ cookiecutter.role_name }}
+    - {{ cookiecutter.role_name }}.dependencies
+
+- name: Install ansible dependencies
+  ansible.builtin.pip:
+    name:
+      - kubernetes
+      - openshift
+      - pyyaml
+  tags:
+    - {{ cookiecutter.role_name }}
+    - {{ cookiecutter.role_name }}.dependencies
+
+- name: create namespace
+  kubernetes.core.k8s:
+    name: "{{ '{{' }} {{ cookiecutter.role_name }}_namespace {{ '}}' }}"
+    api_version: v1
+    kind: Namespace
+    state: present
+  tags:
+    - {{ cookiecutter.role_name }}
+    - {{ cookiecutter.role_name }}.namespace
+...

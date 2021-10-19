@@ -1,0 +1,8 @@
+{
+    "author": "ckaserer",
+    "description": "Ansible Role Description",
+    "license": "MIT",
+    "min_ansible_version": "2.10",
+    "namespace": "role_namespace",
+    "role_name": "my_role_name"
+}

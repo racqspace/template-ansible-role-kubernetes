@@ -1,0 +1,8 @@
+---
+- name: Converge
+  hosts: {{ cookiecutter.role_name }}-test-control-plane
+  connection: docker
+  gather_facts: false
+  roles:
+    - role: {{ cookiecutter.namespace }}.{{ cookiecutter.role_name }}
+...

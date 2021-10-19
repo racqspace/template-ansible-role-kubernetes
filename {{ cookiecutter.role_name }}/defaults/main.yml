@@ -1,0 +1,7 @@
+---
+# Cache update time for apt module.
+{{ cookiecutter.role_name }}_cache_valid_time: 3600
+
+# Specify the kubernetes namespace to install resources to.
+{{ cookiecutter.role_name }}_namespace: default
+...
